@@ -14,7 +14,7 @@
         "symlinks": "metro-with-symlinks"
     },
     "dependencies": {
-        "@tivio/sdk-js": "^2.0.0-alpha3",
+        "@tivio/sdk-js": "2.0.0-alpha3",
         "base-64": "^1.0.0",
         "react": "17.0.2",
         "react-native": "0.66.4"
