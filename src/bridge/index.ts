@@ -59,6 +59,12 @@ tivioEmmiter.addListener('init', async (event) => {
     console.log('Tivio is initialized');
 })
 
+playerWrapperEmmiter.addListener('reportPlaybackEnded', (event) => {
+    const playerWrapper = getPlayerWrapper(event.playerWrapperId)
+
+    playerWrapper?.reportPlaybackEnded()
+})
+
 playerWrapperEmmiter.addListener('reportTimeProgress', (event) => {
     const playerWrapper = getPlayerWrapper(event.playerWrapperId)
 

@@ -46,6 +46,13 @@ public class TivioPlayerWrapperBridge extends ReactContextBaseJavaModule {
         });
     }
 
+    public static void reportPlaybackEnded(int playerWrapperId) {
+        WritableMap params = new WritableNativeMap();
+        params.putInt("playerWrapperId", playerWrapperId);
+
+        bridge.sendEvent("reportPlaybackEnded", params);
+    }
+
     public static void reportTimeProgress(int miliseconds, int playerWrapperId) {
         WritableMap params = new WritableNativeMap();
         params.putInt("miliseconds", miliseconds);

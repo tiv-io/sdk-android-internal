@@ -11,6 +11,10 @@ public class TivioPlayerWrapper {
         this.playerWrapperId = playerWrapperId;
     }
 
+    public void reportPlaybackEnded() {
+        TivioPlayerWrapperBridge.reportPlaybackEnded(this.playerWrapperId);
+    }
+
     public void reportTimeProgress(int miliseconds) {
         TivioPlayerWrapperBridge.reportTimeProgress(miliseconds, this.playerWrapperId);
     }

@@ -19,7 +19,7 @@ public class TivioPlayerSource {
     public TivioPlayerSource(ReadableMap data) {
         this.channelName = data.getString("channelName");
         this.mode = data.getString("mode");
-        this.startPosition = data.getInt("startFromPosition");
+        if(data.hasKey("startFromPosition")) this.startPosition = data.getInt("startFromPosition");
         this.type = data.getString("type");
         this.uri = data.getString("uri");
     }
